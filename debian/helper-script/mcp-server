@@ -1,0 +1,6 @@
+#!/usr/bin/env sh
+
+set -e
+
+cd /usr/share/mcp-kali-server/
+exec python3 mcp_server.py "$@"

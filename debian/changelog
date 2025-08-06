@@ -1,0 +1,5 @@
+mcp-kali-server (0~git20250408-0kali1) kali-dev; urgency=medium
+
+  * Initial release.
+
+ -- Sophie Brun <sophie@kali.org>  Thu, 17 Jul 2025 17:34:31 +0200

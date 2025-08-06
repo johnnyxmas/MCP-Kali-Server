@@ -1,0 +1,2 @@
+*.py usr/share/mcp-kali-server
+debian/helper-script/* usr/bin

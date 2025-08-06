@@ -1,0 +1,5 @@
+Test-Command: kali-server-mcp --help
+Restrictions: superficial
+
+Test-Command: mcp-server --help
+Restrictions: superficial

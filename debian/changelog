@@ -1,3 +1,10 @@
+mcp-kali-server (0.0~git20250407.df99f04-0kali1) kali-dev; urgency=medium
+
+  * Fix debian/watch
+  * New upstream version 0.0~git20250407.df99f04
+
+ -- Sophie Brun <sophie@kali.org>  Thu, 07 Aug 2025 14:50:12 +0200
+
 mcp-kali-server (0~git20250408-0kali1) kali-dev; urgency=medium
 
   * Initial release.

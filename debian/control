@@ -9,8 +9,8 @@ Build-Depends:
  dh-sequence-python3
 Standards-Version: 4.7.2
 Homepage: https://github.com/Wh0am123/MCP-Kali-Server
-Vcs-Browser: https://gitlab.com/packages/kalilinux/mcp-kali-server
-Vcs-Git: https://gitlab.com/packages/kalilinux/mcp-kali-server.git
+Vcs-Browser: https://gitlab.com/kalilinux/packages/mcp-kali-server
+Vcs-Git: https://gitlab.com/kalilinux/packages/mcp-kali-server.git
 
 Package: mcp-kali-server
 Architecture: all

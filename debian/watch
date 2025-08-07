@@ -1,4 +1,9 @@
 version=4
-opts="filenamemangle=s%(?:.*?)?v?(@ANY_VERSION@@ARCHIVE_EXT@)%@PACKAGE@-$1%" \
-    https://github.com/h0am123/MCP-Kali-Server/tags \
-    (?:.*?/)v?@ANY_VERSION@@ARCHIVE_EXT@
+opts="mode=git, pgpmode=none" \
+  https://github.com/Wh0am123/MCP-Kali-Server.git \
+  HEAD debian
+
+# use the following if usptream tags releases
+#opts="filenamemangle=s%(?:.*?)?v?(@ANY_VERSION@@ARCHIVE_EXT@)%@PACKAGE@-$1%" \
+#    https://github.com/Wh0am123/MCP-Kali-Server/tags \
+#    (?:.*?/)v?@ANY_VERSION@@ARCHIVE_EXT@

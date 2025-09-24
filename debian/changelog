@@ -1,3 +1,13 @@
+mcp-kali-server (0.0~git20250813.8aa879b-0kali1) kali-dev; urgency=medium
+
+  [ Arnaud Rebillout ]
+  * Drop 'Rules-Requires-Root: no' from d/control
+
+  [ Sophie Brun ]
+  * New upstream version 0.0~git20250813.8aa879b
+
+ -- Sophie Brun <sophie@kali.org>  Wed, 24 Sep 2025 09:42:10 +0200
+
 mcp-kali-server (0.0~git20250407.df99f04-0kali1) kali-dev; urgency=medium
 
   * Fix debian/watch

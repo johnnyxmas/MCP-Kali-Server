@@ -86,20 +86,20 @@ pip install -r requirements.txt
 If you're running the client and server on the same machine:
 
 ```bash
-./mcp_server.py http://127.0.0.1:5000
+./mcp_server.py --server http://127.0.0.1:5000
 ```
 
 If separate machines, create an ssh tunnel to your Kali MCP server, then launch the client:
 
 ```bash
 ssh -L 5000:localhost:5000 user@KALI_IP
-./mcp_server.py http://127.0.0.1:5000
+./mcp_server.py --server http://127.0.0.1:5000
 ```
 
 NOTE: If you're openly hosting the Kali MCP server on your network (`kali_server --IP...`), you don't need the SSH tunnel ⚠️(this is highly discouraged)⚠️.
 
 ```bash
-./mcp_server.py http://LINUX_IP:5000
+./mcp_server.py --server http://LINUX_IP:5000
 ```
 
 #### Configuration for claude desktop:

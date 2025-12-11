@@ -1,3 +1,9 @@
+mcp-kali-server (0.0~git20251109.a5b3f96-0kali1) kali-dev; urgency=medium
+
+  * New upstream version 0.0~git20251109.a5b3f96
+
+ -- Sophie Brun <sophie@kali.org>  Thu, 11 Dec 2025 13:53:25 +0100
+
 mcp-kali-server (0.0~git20250813.8aa879b-0kali1) kali-dev; urgency=medium
 
   [ Arnaud Rebillout ]

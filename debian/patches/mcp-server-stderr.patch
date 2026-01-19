@@ -1,0 +1,25 @@
+From: Ben Wilson <g0tmi1k@kali.org>
+Date: Mon, 19 Jan 2026 14:17:05 +0000
+Subject: [PATCH] Switch from stdout to stderr
+
+> Local MCP servers should not log messages to stdout (standard out), as this will interfere with protocol operation.
+
+REF: https://modelcontextprotocol.io/legacy/tools/debugging
+---
+ mcp_server.py | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+diff --git a/mcp_server.py b/mcp_server.py
+index dba36912..3277f7bc 100755
+--- a/mcp_server.py
++++ b/mcp_server.py
+@@ -18,7 +18,7 @@
+     level=logging.INFO,
+     format="%(asctime)s [%(levelname)s] %(message)s",
+     handlers=[
+-        logging.StreamHandler(sys.stdout)
++        logging.StreamHandler(sys.stderr)
+     ]
+ )
+ logger = logging.getLogger(__name__)
+

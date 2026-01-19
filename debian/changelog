@@ -1,3 +1,9 @@
+mcp-kali-server (0.0~git20260111.1236856-0kali2) kali-dev; urgency=medium
+
+  * Add mcp-server-stderr.patch
+
+ -- Ben Wilson <g0tmi1k@kali.org>  Mon, 19 Jan 2026 16:18:20 +0000
+
 mcp-kali-server (0.0~git20260111.1236856-0kali1) kali-dev; urgency=medium
 
   * New upstream version 0.0~git20260111.1236856

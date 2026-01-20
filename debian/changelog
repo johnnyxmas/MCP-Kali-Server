@@ -1,3 +1,10 @@
+mcp-kali-server (0.0~git20260119.bffe9f2-0kali1) kali-dev; urgency=medium
+
+  * New upstream version 0.0~git20260119.bffe9f2
+  * Remove mcp-server-stderr.patch merged upstream
+
+ -- Sophie Brun <sophie@kali.org>  Tue, 20 Jan 2026 13:40:13 +0100
+
 mcp-kali-server (0.0~git20260111.1236856-0kali2) kali-dev; urgency=medium
 
   * Add mcp-server-stderr.patch

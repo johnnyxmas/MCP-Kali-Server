@@ -1,3 +1,14 @@
+mcp-kali-server (0.0~git20260119.bffe9f2-0kali3) kali-dev; urgency=medium
+
+  * Introduce dedicated systemd service units to separate components:
+    - mcp-server.service: Manages the bridge client.
+    - kali-server-mcp.service: Manages the API server.
+  * Add a new system user:
+    - _mcp-kali
+  * Disable shell expansion by switching to shell=False in subprocess calls.
+
+ -- Jürgen Löhel <jloehel-@users.noreply.gitlab.com>  Wed, 25 Feb 2026 17:17:37 -0600
+
 mcp-kali-server (0.0~git20260119.bffe9f2-0kali2) kali-dev; urgency=medium
 
   * Re-upload

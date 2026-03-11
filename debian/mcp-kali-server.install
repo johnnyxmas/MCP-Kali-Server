@@ -1,2 +1,3 @@
 *.py usr/share/mcp-kali-server
-debian/helper-script/* usr/bin
+debian/helper-script/kali-server-mcp usr/bin
+debian/helper-script/mcp-server usr/bin

@@ -1,5 +1,11 @@
 Test-Command: kali-server-mcp --help
 Restrictions: superficial
+Features: test-name=check-api-binary
 
 Test-Command: mcp-server --help
 Restrictions: superficial
+Features: test-name=check-bridge-binary
+
+Tests: systemd-unit-verification
+Depends: mcp-kali-server, systemd
+Restrictions: allow-stderr

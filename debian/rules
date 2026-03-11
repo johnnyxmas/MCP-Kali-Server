@@ -1,6 +1,16 @@
 #!/usr/bin/make -f
 
 #export DH_VERBOSE = 1
+pkg_name = mcp-kali-server
 
 %:
 	dh $@ --with python3
+
+override_dh_auto_install:
+	dh_auto_install
+	install -D -m 0644 debian/mcp-server.default debian/mcp-kali-server/etc/default/mcp-server
+	install -D -m 0644 debian/kali-server-mcp.default debian/mcp-kali-server/etc/default/kali-server-mcp
+
+override_dh_installsystemd:
+	dh_installsystemd -p$(pkg_name) --name=mcp-server --no-stop-on-upgrade --no-start --no-enable
+	dh_installsystemd -p$(pkg_name) --name=kali-server-mcp --no-stop-on-upgrade --no-start --no-enable

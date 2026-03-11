@@ -1,0 +1,11 @@
+#!/bin/sh
+set -e
+
+if [ "$1" = "configure" ]; then
+    if ! getent passwd _mcp-kali > /dev/null; then
+        adduser --system --quiet --group --no-create-home \
+                --home /run/mcp-kali --shell /usr/sbin/nologin _mcp-kali
+    fi
+fi
+
+#DEBHELPER#

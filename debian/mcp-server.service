@@ -1,0 +1,15 @@
+[Unit]
+Description=Kali Linux MCP Bridge
+After=network.target
+
+[Service]
+Type=simple
+User=_mcp-kali
+Group=_mcp-kali
+EnvironmentFile=-/etc/default/mcp-server
+RuntimeDirectory=mcp-kali
+ExecStart=/usr/bin/mcp-server --server ${SERVER_URL} --timeout ${TIMEOUT} ${ARGS}
+Restart=on-failure
+
+[Install]
+WantedBy=multi-user.target

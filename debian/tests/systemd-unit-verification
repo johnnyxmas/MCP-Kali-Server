@@ -1,0 +1,9 @@
+#!/bin/sh
+set -e
+
+echo "Verifying systemd units..."
+systemd-analyze verify /lib/systemd/system/kali-server-mcp.service
+systemd-analyze verify /lib/systemd/system/mcp-server.service
+
+echo "Checking for system users..."
+id _mcp-kali

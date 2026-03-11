@@ -1,0 +1,72 @@
+Use shell=False with shlex
+--- a/kali_server.py
++++ b/kali_server.py
+@@ -8,6 +8,7 @@
+ import json
+ import logging
+ import os
++import shlex
+ import subprocess
+ import sys
+ import traceback
+@@ -59,11 +60,16 @@
+     def execute(self) -> Dict[str, Any]:
+         """Execute the command and handle timeout gracefully"""
+         logger.info(f"Executing command: {self.command}")
+-        
++
++        if not isinstance(self.command, str):
++            raise ValueError(f"CommandExecutor expects a string, but got {type(self.command).__name__}")
++
++        cmd_args = shlex.split(self.command)
++
+         try:
+             self.process = subprocess.Popen(
+-                self.command,
+-                shell=True,
++                cmd_args,
++                shell=False,
+                 stdout=subprocess.PIPE,
+                 stderr=subprocess.PIPE,
+                 text=True,
+@@ -140,27 +146,26 @@
+     return executor.execute()
+ 
+ 
++def get_string(params, key):
++    value = params.get(key)
++    if not isinstance(value, str) or not value.strip():
++        raise ValueError(f"Invalid or missing field: {key}")
++    return value.strip()
++
++
+ @app.route("/api/command", methods=["POST"])
+ def generic_command():
+     """Execute any command provided in the request."""
+     try:
+-        params = request.json
+-        command = params.get("command", "")
+-        
+-        if not command:
+-            logger.warning("Command endpoint called without command parameter")
+-            return jsonify({
+-                "error": "Command parameter is required"
+-            }), 400
+-        
+-        result = execute_command(command)
+-        return jsonify(result)
++        params = request.get_json()
++        command = get_string(params, "command")
++        return jsonify(execute_command(command))
++    except ValueError as e:
++        return jsonify({"success": False, "error": str(e)}), 400
+     except Exception as e:
+         logger.error(f"Error in command endpoint: {str(e)}")
+         logger.error(traceback.format_exc())
+-        return jsonify({
+-            "error": f"Server error: {str(e)}"
+-        }), 500
++        return jsonify({"success": False, "error": str(e)}), 500
+ 
+ 
+ @app.route("/api/tools/nmap", methods=["POST"])

@@ -1,0 +1,4 @@
+# Defaults for mcp-server (Bridge)
+SERVER_URL="http://localhost:5000"
+TIMEOUT="300"
+ARGS=""

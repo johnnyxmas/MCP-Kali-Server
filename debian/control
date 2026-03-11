@@ -18,7 +18,10 @@ Depends:
  ${python3:Depends},
  python3-flask,
  python3-mcp,
- python3-requests
+ python3-requests,
+ adduser,
+ sudo
+Recommends: nmap, gobuster, dirb, nikto, sqlmap, metasploit-framework, hydra, john, wpscan, enum4linux, wordlists
 Description: API bridge connecting MCP Clients to the API server
  This package contains a lightweight API bridge that connects MCP Clients (e.g:
  Claude Desktop, 5ire) to the API server which allows excuting commands on a

@@ -1,0 +1,31 @@
+[Unit]
+Description=Kali Linux MCP API Server
+After=network.target
+Documentation=https://gitlab.com/kalilinux/packages/mcp-kali-server
+
+[Service]
+Type=simple
+User=_mcp-kali
+Group=_mcp-kali
+EnvironmentFile=-/etc/default/kali-server-mcp
+RuntimeDirectory=mcp-kali
+ExecStart=/usr/bin/kali-server-mcp --ip $IP --port $PORT $ARGS
+Restart=on-failure
+
+# --- HARDENING ---
+ProtectSystem=full
+ProtectHome=yes
+PrivateTmp=yes
+ProtectKernelTunables=yes
+ProtectKernelModules=yes
+ProtectControlGroups=yes
+PrivateDevices=yes
+ProtectProc=invisible
+RestrictNamespaces=true
+RestrictRealtime=yes
+ProtectHostname=true
+RestrictSUIDSGID=no
+NoNewPrivileges=no
+
+[Install]
+WantedBy=multi-user.target

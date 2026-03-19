@@ -1,3 +1,11 @@
+mcp-kali-server (0.0~git20260317.00154c0-0kali1) kali-dev; urgency=medium
+
+  * New upstream version 0.0~git20260317.00154c0
+  * Update installation for new upstream release
+  * Refresh patches
+
+ -- Sophie Brun <sophie@kali.org>  Wed, 18 Mar 2026 17:26:14 +0100
+
 mcp-kali-server (0.0~git20260119.bffe9f2-0kali3) kali-dev; urgency=medium
 
   [ Jürgen Löhel ]

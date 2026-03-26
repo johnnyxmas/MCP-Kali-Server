@@ -4,16 +4,32 @@
 
 This MCP is able to run terminal commands as well as interacting with web applications using:
 
+- `cloud-enum`
 - `Dirb`
+- `dnsmap`
+- `dnstracer`
+- `dnswalk`
 - `enum4linux`
 - `gobuster`
 - `Hydra`
 - `John the Ripper`
+- `joomscan`
+- `lynis`
+- `Medusa`
 - `Metasploit-Framework`
 - `Nikto`
 - `Nmap`
+- `padbuster`
+- `Photon`
+- `polenum`
+- `sipvicious`
+- `smtp-user-enum`
 - `sqlmap`
+- `sqlninja`
+- `unicornscan`
+- `wapiti`
 - `WPScan`
+- `xsser`
 - As well as being able to execute raw commands.
 
 As a result, this is able to perform **AI-assisted penetration testing** and solving **CTF challenges** in real time.
